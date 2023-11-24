@@ -1,6 +1,11 @@
 import { useSelector } from 'react-redux';
 import { useRef, useState, useEffect } from 'react';
-import { getDownloadURL, getStorage, ref, uploadBytesResumable } from 'firebase/storage';
+import { 
+  getDownloadURL, 
+  getStorage, 
+  ref, 
+  uploadBytesResumable,
+ } from 'firebase/storage';
 import { app } from '../firebase';
 import {
   updateUserStart,
@@ -280,7 +285,6 @@ export default function Profile() {
           )}
         </div>
       )}
-
       </div>
   );
 }

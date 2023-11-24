@@ -14,6 +14,8 @@ import {
     FaParking,
     FaShare,
   } from 'react-icons/fa';
+  import Contact from '../components/Contact';
+
 export default function Listing() {
     SwiperCore.use([Navigation]);
     const [listing, setListing] = useState(null);
@@ -45,7 +47,6 @@ export default function Listing() {
         };
         fetchListing();
       }, [params.listingId]);
-
 
   return (
     <main>
@@ -80,12 +81,6 @@ export default function Listing() {
               }}
             />
           </div>
-          {copied && (
-            <p className='fixed top-[23%] right-[5%] z-10 rounded-md bg-slate-100 p-2'>
-              Link copied!
-            </p>
-          )}
-          <div>
           {copied && (
             <p className='fixed top-[23%] right-[5%] z-10 rounded-md bg-slate-100 p-2'>
               Link copied!
@@ -150,10 +145,7 @@ export default function Listing() {
             {contact && <contact listing={listing} />}
           </div>
           </div>
-        </div>
-      ) 
-      }
-
+      )}
     </main>
   )
 }

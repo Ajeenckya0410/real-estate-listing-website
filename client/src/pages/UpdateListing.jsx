@@ -43,7 +43,6 @@ export default function CreateListing() {
             return;
           }
           setFormData(data);
-        console.log(listingId);
         };
     
         fetchListing();
@@ -76,9 +75,7 @@ export default function CreateListing() {
           setUploading(false);
         }
       };
-    
-
-    
+  
     const storeImage = async (file) => {
         return new Promise((resolve, reject) => {
           const storage = getStorage(app);
